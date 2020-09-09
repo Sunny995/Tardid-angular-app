@@ -1,0 +1,15 @@
+<mat-card>
+    <form [formGroup]="contactForm" >
+         <div [ngClass]="'contact_form'">
+            <mat-form-field>
+                <input matInput #name placeholder="Name" formControlName="name">
+                <mat-error>This field is required</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput #mobile placeholder="Mobile" formControlName="mobile">
+                <mat-error>This field is required</mat-error>
+            </mat-form-field>
+            <button mat-raised-button color="primary" [disabled]="contactForm.invalid" type="submit">Add Contact</button>
+        </div>
+    </form>
+</mat-card>

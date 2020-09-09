@@ -1,0 +1,21 @@
+<app-header [ngClass]="'top_bar_main'"></app-header>
+<div>
+    <!-- <a mat-button (click)="delete()"> Deletye</a> -->
+    <app-nav [ngClass]="'nav_bar'"></app-nav>
+    <div [ngClass]="'edit_form'"><app-edit  (edited)="showItemsAfterEdit()" [selectedItem]="selectedItem" *ngIf="edit === true"></app-edit></div>
+    
+    <div *ngIf="edit === false" [ngClass]="'content_items'" align="center" fxLayout="row wrap" fxLayoutGap="25px"
+        fxLayoutAlign="flex-start">
+        <mat-card [ngClass]="'card'" fxFlex="0 1 calc(23.3% - 32px)" *ngFor='let p of foodItems'>
+            <mat-card-header>
+                <mat-card-title>{{p.name}}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="http://www.pngall.com/wp-content/uploads/2016/03/Food-Free-PNG-Image.png">
+            <mat-card-actions>
+                <h4>{{p.procedure}}</h4>
+                <a mat-button (click)="editItem(p)"> Edit</a>
+                <a mat-button (click)="delete(p)"> Delete</a>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

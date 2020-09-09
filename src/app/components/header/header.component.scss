@@ -1,0 +1,32 @@
+span {
+    flex: auto;
+}
+
+.top_bar_main{
+    display: flex;
+    min-height: 60px;
+    background-color: lightgrey;
+}
+
+.options_bar_div{
+    flex: auto;
+    display: flex;
+    padding:25px;
+}
+
+.search_div{
+    flex: auto;
+    min-width: 60%;
+    padding-top: 20px;
+}
+
+
+.saved_list_span{
+    background-color: rgb(53, 53, 248);
+    color: white;
+}
+
+.saved_list_div{
+    flex:auto;
+}
+

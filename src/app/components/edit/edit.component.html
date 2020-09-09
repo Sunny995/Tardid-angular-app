@@ -1,0 +1,15 @@
+<mat-card>
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit(receipe_name.value,procedure.value)">
+         <div [ngClass]="'edit_form'">
+            <mat-form-field>
+                <input matInput #receipe_name placeholder="Receipe Name" formControlName="receipe_name">
+                <mat-error>This field is required</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <textarea matInput #procedure placeholder="Procedure" formControlName="procedure"></textarea>
+                <mat-error>This field is required</mat-error>
+            </mat-form-field>
+            <button mat-raised-button color="primary" [disabled]="editForm.invalid" type="submit">Edit Receipe</button>
+        </div>
+    </form>
+</mat-card>
